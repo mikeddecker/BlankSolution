@@ -4,9 +4,8 @@ using System;
 namespace FitnessApplicatie {
     class Program {
         static void Main(string[] args) {
-            string brondata = "C:\\Users\\miked\\Documents\\school\\HOGENT\\semester 2\\insertRunning\\insertRunning.sql";
-            string brondata2 = @"C:\Users\miked\Documents\school\HOGENT\semester 2\insertRunning\insertRunningTest.txt";
-            string logdata = @"C:\Users\miked\Documents\school\HOGENT\semester 2\insertRunning\logging.txt";
+            string brondata = "insertRunning.sql";
+            string logdata = "logging.txt";
 
             Bestandlezer bestandlezer = new Bestandlezer();
             var data = bestandlezer.LeesData(brondata, logdata);
