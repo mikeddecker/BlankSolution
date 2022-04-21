@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace RunningBL {
     public class Interval {
-        public Interval(int sequentienummer, int tijdsduurInSeconden, double gemiddeldeSnelheid) {
+        public Interval(int sequentienummer, int tijdsduurInSeconden, double loopsnelheid) {
             SetSequentieNummer(sequentienummer);
             SetTijdsduurInSeconden(tijdsduurInSeconden);
-            SetGemiddeldeSnelheid(gemiddeldeSnelheid);
+            SetGemiddeldeSnelheid(loopsnelheid);
         }
 
         public int Sequentienummer { get; private set; }
@@ -32,7 +32,7 @@ namespace RunningBL {
 
         public void SetGemiddeldeSnelheid(double gemiddeldeSnelheid) {
             if (gemiddeldeSnelheid < 5 || gemiddeldeSnelheid > 22) {
-                throw new RunningException("Interval-SetGemiddeldeSnelheid");
+                throw new RunningException("Interval-SetGemiddeldeSnelheid | " + gemiddeldeSnelheid);
             }
             GemiddeldeSnelheid = gemiddeldeSnelheid;
         }

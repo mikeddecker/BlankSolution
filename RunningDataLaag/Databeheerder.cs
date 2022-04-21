@@ -17,7 +17,7 @@ namespace RunningDataLaag {
                     trainingVoorIedereKlant[sessie.KlantNr].Add(sessie);
                 }
 
-                // Trainingen per dag
+                // Trainingen per dag --> ik vul hier al een extra dictionary om de datums later makkelijk te kunnen opvragen, want we gaan het toch nodig hebben.
                 if (!trainingPerDag.ContainsKey(sessie.Datum.Date)) {
                     trainingPerDag.Add(sessie.Datum.Date, new List<Runningsession> { sessie });
                 } else {

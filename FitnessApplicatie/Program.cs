@@ -1,5 +1,7 @@
-﻿using RunningDataLaag;
+﻿using RunningBL;
+using RunningDataLaag;
 using System;
+using System.Collections.Generic;
 
 namespace FitnessApplicatie {
     class Program {
@@ -8,7 +10,7 @@ namespace FitnessApplicatie {
             string logdata = "logging.txt";
 
             Bestandlezer bestandlezer = new Bestandlezer();
-            var data = bestandlezer.LeesData(brondata, logdata);
+            List<Runningsession> data = bestandlezer.LeesData(brondata, logdata);
 
             Console.WriteLine(data);
 
